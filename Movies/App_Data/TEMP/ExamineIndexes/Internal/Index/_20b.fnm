@@ -1,0 +1,13 @@
+þÿÿÿsidparentIDlevelwriterID	creatorIDnodeTypetemplate	sortOrder
+createDate
+updateDatenodeNameurlName
+writerNamecreatorNamenodeTypeAliaspathbodyTextsiteDescriptionsiteName__NodeId__IndexType__Path__NodeTypeAlias
+__nodeNameumbracoNaviHide
+teaserTextumbracoFilemenuItemHyperLinkcinemaContactWebsitecinemaProgram
+cinemaName
+movieGenreparagraphSubTitleparagraphText
+movieTitlemovieIntroduction	movieCastmovieDirectormovieDirectedBymovieRunningLength_intmovieWriterversionumbracoBytesumbracoExtensionumbracoHeightumbracoWidth
+movieImageparagraphImagemovieRelatedMoviescinemaContactPhoneNumbercinemaContactEmailcinemaAdressCitycinemaAdressNumbercinemaAdressPostalCodecinemaAdressStreetmovieProgram_movie_linkmovieProgram_namemovieProgram_showtimesmovieProgram_spoken_languagemovieProgram_subtitlesmovieProgram_threeDcinemas_headerTextcinemas_introText"movieProgram_additiona_informationmovies_headermovies_intoTextnewsItemDatenewsItemIntroShortnewsItemSourcenewsItemTitle
+newsHeadernewsIntroTextnewsPageHeadernewsPageIntroTextstring_testfieldstring2testfieldstring1testfieldstring3_stringint_integerWithPrefixintegerWithPostfix_int#movieProgram_additional_informationcinemaAddressCitycinemaAddressNumbercinemaAddressPostalCodecinemaAddressStreetheaderLatestNewshomePageHeaderhomePageHeaderTopMovieshomePageIntroTextdouble_doubleWithPrefixdoubleWithPostfix_doublebool_booleanWithPrefixbooleanfalsebooleantruebooleanWithPostfix_booldatetime_dateTimeWithPrefixdateTimeWithPostfix_datetimecontentPicker
+datePickerdatePickerWithTimedropDownColorsdropDownMultileFruitnumericFieldmediaPickerFieldmultiNodeTreePickerFieldrichTextFieldurlPickerFieldmultiUrlPickerFieldmultipleDatesField
+moviesGridcinemaFeaturesradioButtonListFielddropDownMultipleFruitdropdownPublishingKeysFieldsQLDropdownFieldsQLCheckboxListField

@@ -1,0 +1,100 @@
+﻿<%@ Master Language="C#" MasterPageFile="~/umbraco/masterpages/default.master" AutoEventWireup="true" %>
+
+<%@ Register TagName="mainNavigation" TagPrefix="uctrl" Src="~/Usercontrols/Navigation/mainNavigation.ascx" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="ContentPlaceHolderDefault" runat="server">
+
+    <!doctype html>
+    <!--[if lt IE 7 ]> <html class="no-js ie ie6 ltie10 ltie9 ltie8" > <![endif]-->
+    <!--[if lt IE 8 ]> <html class="no-js ie ltie10 ltie9 ltie8" > <![endif]-->
+    <!--[if IE 8 ]>    <html class="no-js ie ie8 ltie10 ltie9" > <![endif]-->
+    <!--[if IE 9 ]>    <html class="no-js ie ie9 ltie10" > <![endif]-->
+    <!--[if (gt IE 9)|!(IE)]><!-->
+    <html class="no-js ">
+    <!--<![endif]-->
+
+    <head id="head" runat="server">
+
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>
+            <asp:PlaceHolder runat="server">
+                <umbraco:Item ID="Item1" runat="server" Field="pageName"></umbraco:Item>
+                -
+                <umbraco:Item ID="Item2" runat="server" Field="siteName" recursive="true"></umbraco:Item>
+            </asp:PlaceHolder>
+        </title>
+
+        <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+        <script src="/scripts/js/jquery.js" type="text/javascript"></script>
+        <script src="/scripts/mustache.js" type="text/javascript"></script>
+        <script src="/scripts/js/script.js" type="text/javascript"></script>
+        <script src="/scripts/js/movies.js" type="text/javascript"></script>
+
+        <link rel="stylesheet" type="text/css" href="/css/reset.css">
+        <link rel="stylesheet" href="/css/feijoa-default.css" media="screen">
+        <link rel="stylesheet" href="/css/feijoa-mini.css" media="screen and (max-device-width: 320px) and (max-device-width: 480px)">
+        <link rel="stylesheet" href="/css/feijoa-progressive.css" media="screen and (min-device-width:800px)">
+        <link rel="stylesheet" href="/css/feijoa-colour.css" media="screen">
+        <link rel="stylesheet" href="/fonts/museo/museo.css" media="screen">
+        <link rel="stylesheet" href="/css/movies.css" media="screen">
+
+        <!--[if IE 8]><link rel="stylesheet" href="/css/feijoa-ie8.css" media="screen, projection"><![endif]-->
+        <!--[if IE 7]><link rel="stylesheet" href="/css/feijoa-ie7.css" media="screen, projection"><![endif]-->
+        <!--[if IE 6]>
+  <link rel="stylesheet" href="/css/feijoa-ie6.css" media="screen, projection">
+  <script src="/scripts/js/dd_belatedpng.js"></script>
+  <![endif]-->
+
+
+        <asp:ContentPlaceHolder ID="cp_head" runat="server"></asp:ContentPlaceHolder>
+    </head>
+
+    <body id="themetype" class="light">
+        <div id="main">
+
+            <asp:ContentPlaceHolder ID="cp_top" runat="server">
+
+
+                <div id="top">
+                    <div class="top">
+                        <h1 id="siteName">
+                            <a href="/" id="siteHome">
+                                Movies
+                            </a>
+                        </h1>
+                        <h2 id="siteDescription">
+                            Now showing
+                        </h2>
+
+                        <%--Navigation--%>
+                        <uctrl:mainNavigation ID="MainNavigation1" runat="server" />
+                        <%--Test Navigation--%>
+                        <ul id="topNavigation" style="float:right;clear:none;">
+                            <li><a class="navigation" href="/testmodelpage"><span>Test</span></a></li>
+                        </ul>
+                        <%--End Navigation--%>
+
+                    </div>
+                </div>
+            </asp:ContentPlaceHolder>
+
+            <div id="body">
+                <form id="umbMasterForm" runat="server">
+                    <asp:ContentPlaceHolder ID="cp_content" runat="server"></asp:ContentPlaceHolder>
+                </form>
+            </div>
+        </div>
+        <asp:ContentPlaceHolder ID="cp_footer" runat="server">
+            <div id="footer">
+                <div class="colour-filter"></div>
+                <div class="footer">
+                    <h5><a id="feijoa" href="http://www.hellofeijoa.com/skins">Feijoa Skins
+            </a></h5>
+                </div>
+            </div>
+        </asp:ContentPlaceHolder>
+
+    </body>
+    </html>
+</asp:Content>

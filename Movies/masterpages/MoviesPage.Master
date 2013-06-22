@@ -1,0 +1,42 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MoviesPage.master.cs" Inherits="Movies.masterpages.MoviesPage" MasterPageFile="~/masterpages/umbMaster.master" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="cp_content" runat="server">
+    <div id="content">
+        <div id="sidebar" class="umbModuleContainer">
+            <asp:literal id="sidebarContent" runat="server" Visible="true"></asp:literal>
+        </div>
+        <div id="movies">
+            <asp:literal id="pageContent" runat="server" Visible="true"></asp:literal>
+        </div>
+    </div>
+
+     <script type="text/template" id="moviesMustacheTemplate" data-template="movies.mustache">
+        <asp:Literal ID="moviesMustacheTemplate" runat="server">
+            <h1>{{Header}}</h1>
+            <p>{{IntroText}}</p>
+            <ul>
+            {{#MovieListItems}}
+                <li>
+                    <h3>{{Title}}</h3>
+                    <a href="{{NodeUrl}}"><img src="{{Image.Url}}"></a>
+                    <div>{{Genre.NodeName}}</div>
+                </li>
+            {{/MovieListItems}}
+            </ul>
+        </asp:Literal>        
+    </script>
+
+     <script type="text/template" id="sidebarMustacheTemplate" data-template="sidebar.mustache">
+        <asp:Literal ID="sidebarMustacheTemplate" runat="server">
+            <h3 class="filterclass">Genres</h3>
+            <div class="genres">
+                <ul>
+                {{#GenreFilterItems}}
+                    <li><a href="#" class="filteritem" data-item="{{NodeId}}">{{NodeName}}</a></li>
+                {{/GenreFilterItems}}
+                </ul>
+            </div>
+        </asp:Literal>        
+    </script>
+
+</asp:Content>

@@ -1,0 +1,60 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="CinemaPage.Master.cs" Inherits="Movies.masterpages.CinemaPage"  MasterPageFile="~/masterpages/umbMaster.master"  %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="cp_content" runat="server">
+    <div id="content">
+        <div id="sidebar" class="umbModuleContainer">
+            <asp:literal id="sidebarContent" runat="server" Visible="true"></asp:literal>
+        </div>
+        <asp:literal id="pageContent" runat="server" Visible="true"></asp:literal>
+    </div>
+
+    <script type="text/template" id="cinemaMustacheTemplate" data-template="cinema.mustache">
+        <asp:Literal ID="cinemaMustacheTemplate" runat="server">
+            <h1>{{NodeName}}</h1>
+            <div class="bodyText">
+            <h2>Movies</h2>
+            <ul>
+            {{#MoviePrograms}}
+                <li class="movieProgram">{{> movieProgram.mustache}}</li>
+            {{/MoviePrograms}}
+            </ul>
+            </div>
+        </asp:Literal>        
+    </script>
+
+    <script type="text/template" id="movieProgramMustacheTemplate" data-template="movieProgram.mustache">
+        <asp:Literal ID="movieProgramMustacheTemplate" runat="server">
+                <p>{{Name}}</p>
+                <div>
+                <a href="{{MovieLink.Url}}"><img src="{{MovieInfo.Image.Url}}"></a>
+                <a href="{{MovieLink.Url}}">More...</a>
+                </div>
+                <div>
+                    {{#AdditionalInformation}}<span>{{AdditionalInformation}}</span><br>{{/AdditionalInformation}}
+                    {{#SpokenLanguage}}<span>Spoken language: </span><span>{{SpokenLanguage}}</span><br>{{/SpokenLanguage}}
+                    {{#Subtitles}}<span>Subtitles</span><br>{{/Subtitles}}
+                    {{#ThreeD}}<span>3D</span>{{/ThreeD}}
+                </div>
+                <div>
+                    {{#MovieTimes}}
+                        <span>{{DisplayDate}}</span><span class="tab">{{DisplayTimes}}</span><br>
+                    {{/MovieTimes}}
+                </div>
+        </asp:Literal>        
+    </script>
+    
+    <script type="text/template" id="cinemaSidebarMustacheTemplate" data-template="cinemaSidebar.mustache">
+        <asp:Literal ID="cinemaSidebarMustacheTemplate" runat="server">
+            <h3>Address</h3>
+            <div class="address">
+                <span>{{AddressStreet}}</span><span>{{AddressNumber}}</span><br><span>{{AddressPostalCode}}</span>,<span>{{AddressCity}}</span>
+            </div>
+            <h3>Contact</h3>
+            <div class="contact">
+                {{#ContactPhoneNumber}}{{ContactPhoneNumber}}</span><br>{{/ContactPhoneNumber}}
+                {{#ContactEmail}}<span>{{ContactEmail}}</span><br>{{/ContactEmail}}
+                {{#ContactWebsite}}<a class="silenthref" href="{{ContactWebsite.Url}}">{{ContactWebsite.Url}}</a><br>{{/ContactWebsite}}
+            </div>
+        </asp:Literal>        
+    </script>
+</asp:Content>
