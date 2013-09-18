@@ -48,11 +48,11 @@
                     [Property("urlPickerField")]
       public Hyperlink UrlPickerField { get; set; }
     
-                    [Property("multiUrlPickerField")]
-      public List<Hyperlink> MultiUrlPickerField { get; set; }
-    
                     [Property("booleanfalse")]
       public bool Booleanfalse { get; set; }
+    
+                    [Property("multiUrlPickerField")]
+      public List<Hyperlink> MultiUrlPickerField { get; set; }
     
                     [Property("multipleDatesField")]
       public List<DateTime> MultipleDatesField { get; set; }
@@ -60,11 +60,11 @@
                     [Property("cinemaFeatures")]
       public List<CheckboxListCinemaFeatures> CinemaFeatures { get; set; }
     
-                    [Property("moviesGrid")]
-    public MovieDataGrid MoviesGrid { get; set; }
-    
                     [Property("contentPicker")]
       public int ContentPicker { get; set; }
+    
+                    [Property("moviesGrid")]
+    public MovieDataGrid MoviesGrid { get; set; }
     
                     [Property("datePickerWithTime")]
       public DateTime DatePickerWithTime { get; set; }
@@ -72,11 +72,11 @@
                     [Property("sQLDropdownField")]
       public string SQLDropdownField { get; set; }
     
-                    [Property("sQLCheckboxListField")]
-      public List<string> SQLCheckboxListField { get; set; }
-    
                     [Property("datePicker")]
       public DateTime DatePicker { get; set; }
+    
+                    [Property("sQLCheckboxListField")]
+      public List<string> SQLCheckboxListField { get; set; }
     
                     [Property("dropDownColors")]
       public DropDownColors DropDownColors { get; set; }

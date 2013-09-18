@@ -16,6 +16,9 @@ $(document).ready(function () {
         
                     var template = $('[data-template="movies.mustache"]').html();
                     var partials = [];
+                    $('[data-template]').each(function () {
+                        partials[$(this).data('template')] = $(this).html();
+                    });
 
                     var html = Mustache.render(template, JSON.parse(responseData), partials);
                     $('#movies').html(html);

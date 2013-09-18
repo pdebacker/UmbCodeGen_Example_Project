@@ -107,7 +107,7 @@
                 </ul>
             </div>
             <br>
-            <div><span class="property">Multiple dates:</span><span class="value"></span></div>
+            <div><span class="property">Multiple dates:</span><span class="value"></span></div><br />
             <div>
                 <ul>
                 {{#MultipleDatesField}}    

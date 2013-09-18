@@ -51,7 +51,7 @@
             </div>
             <h3>Contact</h3>
             <div class="contact">
-                {{#ContactPhoneNumber}}{{ContactPhoneNumber}}</span><br>{{/ContactPhoneNumber}}
+                {{#ContactPhoneNumber}}<span>{{ContactPhoneNumber}}</span><br>{{/ContactPhoneNumber}}
                 {{#ContactEmail}}<span>{{ContactEmail}}</span><br>{{/ContactEmail}}
                 {{#ContactWebsite}}<a class="silenthref" href="{{ContactWebsite.Url}}">{{ContactWebsite.Url}}</a><br>{{/ContactWebsite}}
             </div>
