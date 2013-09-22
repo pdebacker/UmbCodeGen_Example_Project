@@ -12,8 +12,11 @@ Have fun exploring it.
 See https://github.com/pdebacker/UmbCodeGen on Git.
 See http://nuget.org/packages/UmbCodeGen/ on NuGet.
 
+The example project uses a SQL CE database. However a backup
+of a Microsoft SQL Server Express Edition 2008,
+version 10.50.2550.0 database is available as well. 
 
-The database is a backup of a Microsoft SQL Server Express Edition 2008,
-version 10.50.2550.0 database. The Umbraco 'admin' password is 'movies'.
+The Umbraco 'admin' password is 'movies'.
+
 
 
